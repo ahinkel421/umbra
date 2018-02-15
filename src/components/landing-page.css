@@ -1,7 +1,9 @@
 body {
-	background-color: black;
+	background-color: #252525;
 }
 
 h1 {
-	color: #ffffffc2;
+	color: #fffffff0;
+	font-weight: normal;
+	font-size: 50px;
 }
