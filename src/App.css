@@ -1,9 +1,12 @@
-h1 {
-  color: #fffffff0;
-  font-weight: normal;
-  font-size: 70px;
+body {
+  color: #fffffff0;;
 }
 
 header {
   text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 70px;
 }

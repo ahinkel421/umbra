@@ -21,7 +21,7 @@ export default class LandingPage extends React.Component {
 	render() {
 		if(!this.state.startedGame) {
 			return(
-				<div>
+				<div className='button-box'>
 					<button className='start-button' onClick={() => this.startGame(true)}>Start Game</button>
 				</div>
 			);
