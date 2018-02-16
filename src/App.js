@@ -6,7 +6,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-      	<h1>Umbra</h1>
+      	<header>
+      		<h1>Umbra</h1>
+      	</header>
         <LandingPage />
       </div>
     );
