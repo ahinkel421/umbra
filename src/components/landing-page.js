@@ -1,12 +1,14 @@
 import React from 'react';
-import './../index.css';
+import DialogSection from './dialog-section';
 import './landing-page.css'
 
 export default class LandingPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			startedGame: false
+			startedGame: false,
+			questions: [],
+			answers: []
 		}
 	}
 
@@ -25,7 +27,7 @@ export default class LandingPage extends React.Component {
 			);
 		}
 		return(
-			<dialogSection />
+			<DialogSection />
 		);
 	}
 }
