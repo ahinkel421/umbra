@@ -20,7 +20,6 @@ export default class LandingPage extends React.Component {
 		if(!this.state.startedGame) {
 			return(
 				<div>
-					<h1>Umbra</h1>
 					<button className='start-button' onClick={() => this.startGame(true)}>Start Game</button>
 				</div>
 			);
