@@ -8,8 +8,7 @@ export default class LandingPage extends React.Component {
 		super(props);
 		this.state = {
 			startedGame: false,
-			questions: [],
-			answers: []
+			currentQuestion: 0
 		}
 	}
 

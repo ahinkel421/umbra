@@ -5,7 +5,9 @@ export default class Question extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			questions: [],
+			questions: [
+				
+			],
 			questionNumber: 0
 		}
 	}
