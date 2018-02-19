@@ -6,7 +6,6 @@ export default class StatsBox extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			playerName: '',
 			playerStrength: 0,
 			playerSpeed: 0,
 			playerIntelligence: 0
@@ -19,7 +18,7 @@ export default class StatsBox extends React.Component {
 	render() {
 		return(
 			<div className='stats-box'>
-				<h2 className='player-name'>{this.state.playerName}</h2>
+				<h2 className='player-name'>{this.props.name}</h2>
 				<ul>
 					<Stat text='Strength' value={this.state.playerStrength} />
 					<Stat text='Speed' value={this.state.playerSpeed} />

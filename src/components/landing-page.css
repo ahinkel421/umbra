@@ -5,3 +5,7 @@ body {
 .button-box {
 	text-align: center;
 }
+
+.player-name-input {
+	margin-left: 30px;
+}

@@ -8,7 +8,8 @@ export default class LandingPage extends React.Component {
 		super(props);
 		this.state = {
 			startedGame: false,
-			currentQuestion: 0
+			currentQuestion: 0,
+			playerName: ''
 		}
 	}
 
@@ -26,11 +27,14 @@ export default class LandingPage extends React.Component {
 				</div>
 			);
 		}
-		return(
-			<div>
-				<DialogSection />
-				<StatsBox />
-			</div>
-		);
+		else if(this.state.currentQuestion === 0) {
+			return(
+				<div>
+					<DialogSection />
+					<input className='player-name-input' placeholder='Enter your name' />
+					<StatsBox name={this.state.playerName} />
+				</div>
+			);
+		}
 	}
 }
