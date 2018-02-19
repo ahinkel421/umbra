@@ -1,5 +1,6 @@
 import React from 'react';
 import Stat from './stat';
+import './stats-box.css';
 
 export default class StatsBox extends React.Component {
 	constructor(props) {

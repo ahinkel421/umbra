@@ -1,0 +1,9 @@
+.stats-box {
+	height: 400px;
+	width: 350px;
+	position: fixed;
+	right: 20px;
+	border: 2px solid grey;
+	border-radius: 6px;
+	padding: 10px;
+}
