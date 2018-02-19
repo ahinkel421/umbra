@@ -19,6 +19,12 @@ export default class LandingPage extends React.Component {
 		});
 	}
 
+	setName(name) {
+		this.setState({
+			playerName: name
+		});
+	}
+
 	render() {
 		if(!this.state.startedGame) {
 			return(
@@ -31,7 +37,13 @@ export default class LandingPage extends React.Component {
 			return(
 				<div>
 					<DialogSection />
-					<input className='player-name-input' placeholder='Enter your name' />
+					<form className='name-form' onSubmit={e => 
+						e.preventDefault();
+						this.setName() 
+					}>
+						<input className='player-name-input' placeholder='Enter your name' />
+						<button>Submit</button>
+					</form>
 					<StatsBox name={this.state.playerName} />
 				</div>
 			);
