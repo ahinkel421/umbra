@@ -2,24 +2,22 @@ import React from 'react';
 import Stat from './stat';
 
 export default class StatsBox extends React.Component {
-
+	constructor(props) {
+		super(props);
+		this.state = {
+			playerStrength: 0,
+			playerSpeed: 0,
+			playerIntelligence: 0
+		}
+	}
 	render() {
 		return(
 			<div className='stats-box'>
 				<h2>Players name</h2>
 				<ul>
-					<li>
-						<Stat />
-					</li>
-					<li>
-						<Stat />
-					</li>
-					<li>
-						<Stat />
-					</li>
-					<li>
-						<Stat />
-					</li>
+					<Stat text='Strength' value={this.state.playerStrength}/>
+					<Stat text='Speed' value={this.state.playerSpeed}/>
+					<Stat text='Intelligence' value={this.state.playerIntelligence} />
 				</ul>
 			</div>
 		);
