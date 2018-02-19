@@ -1,5 +1,6 @@
 import React from 'react';
 import DialogSection from './dialog-section';
+import StatsBox from './stats-box';
 import './landing-page.css'
 
 export default class LandingPage extends React.Component {
@@ -27,8 +28,10 @@ export default class LandingPage extends React.Component {
 			);
 		}
 		return(
-			<DialogSection />
-			
+			<div>
+				<DialogSection />
+				<StatsBox />
+			</div>
 		);
 	}
 }
