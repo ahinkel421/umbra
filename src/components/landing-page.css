@@ -9,15 +9,29 @@ button {
     border-radius: 5px;
 }
 
+.confirm-name-button {
+	font-size: 15px;
+	width: 30px;
+}
+
 .button-box {
 	text-align: center;
 }
 
 .player-name-input {
 	margin: 10px 10px 0 30px;
+	padding: 12px;
 	width: 200px;
 	height: 28px;
 	font-size: 15px;
-	border-radius: 4px;
+	border-radius: 15px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.player-name-input:focus {
+	outline-width: 0;
+}
+
+.player-name-input:focus::placeholder {
+	color: #afafaf
 }

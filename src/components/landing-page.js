@@ -40,8 +40,8 @@ export default class LandingPage extends React.Component {
 					<form className='name-form' onSubmit={e => 
 						e.preventDefault()
 					}>
-						<input className='player-name-input' placeholder='Enter your name' />
-						<button>Submit</button>
+						<input className='player-name-input' placeholder='Enter your name...' />
+						<button className="confirm-name-button">+</button>
 					</form>
 					<StatsBox name={this.state.playerName} />
 				</div>
