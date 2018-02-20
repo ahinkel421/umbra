@@ -29,7 +29,7 @@ export default class LandingPage extends React.Component {
 		if(!this.state.startedGame) {
 			return(
 				<div className='button-box'>
-					<button className='start-button' onClick={() => this.startGame(true)}>Start Game</button>
+					<button onClick={() => this.startGame(true)}>Start Game</button>
 				</div>
 			);
 		}
@@ -38,8 +38,7 @@ export default class LandingPage extends React.Component {
 				<div>
 					<DialogSection />
 					<form className='name-form' onSubmit={e => 
-						e.preventDefault();
-						this.setName() 
+						e.preventDefault()
 					}>
 						<input className='player-name-input' placeholder='Enter your name' />
 						<button>Submit</button>

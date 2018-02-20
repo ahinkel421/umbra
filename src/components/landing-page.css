@@ -2,10 +2,22 @@ body {
 	background-color: #252525;
 }
 
+button {
+	font-family: 'Open Sans', sans-serif;   
+	width: 90px;
+    height: 25px;
+    border-radius: 5px;
+}
+
 .button-box {
 	text-align: center;
 }
 
 .player-name-input {
-	margin-left: 30px;
+	margin: 10px 10px 0 30px;
+	width: 200px;
+	height: 28px;
+	font-size: 15px;
+	border-radius: 4px;
+	font-family: 'Open Sans', sans-serif;
 }
