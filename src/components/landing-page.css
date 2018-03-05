@@ -33,5 +33,5 @@ button {
 }
 
 .player-name-input:focus::placeholder {
-	color: #afafaf
+	color: #afafaf;
 }
