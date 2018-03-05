@@ -6,9 +6,7 @@ export default class StatsBox extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			playerStrength: 0,
-			playerSpeed: 0,
-			playerIntelligence: 0
+			
 		}
 		// updateName(name) {
 			//need to grab user's input from question and 
@@ -20,9 +18,9 @@ export default class StatsBox extends React.Component {
 			<div className='stats-box'>
 				<h2 className='player-name'>{this.props.name}</h2>
 				<ul>
-					<Stat text='Strength' value={this.state.playerStrength} />
-					<Stat text='Speed' value={this.state.playerSpeed} />
-					<Stat text='Intelligence' value={this.state.playerIntelligence} />
+					<Stat text='Strength' value={this.props.strength} />
+					<Stat text='Speed' value={this.props.speed} />
+					<Stat text='Intelligence' value={this.props.intelligence} />
 				</ul>
 			</div>
 		);
