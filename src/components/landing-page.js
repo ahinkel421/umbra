@@ -1,7 +1,10 @@
 import React from 'react';
 import DialogSection from './dialog-section';
 import StatsBox from './stats-box';
-import './landing-page.css'
+import './landing-page.css';
+import QUESTIONS from '../all-questions';
+
+console.log(QUESTIONS[0]);
 
 export default class LandingPage extends React.Component {
 	constructor(props) {
@@ -19,7 +22,8 @@ export default class LandingPage extends React.Component {
 
 	startGame(startedGame) {
 		this.setState({
-			startedGame
+			startedGame,
+			currentQuestion: 1
 		});
 	}
 
@@ -41,7 +45,7 @@ export default class LandingPage extends React.Component {
 				</div>
 			);
 		}
-		else if(this.state.currentQuestion === 0) {
+		else if(this.state.currentQuestion >= 0) {
 			return(
 				<div>
 					<DialogSection />
