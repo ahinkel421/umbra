@@ -9,7 +9,10 @@ export default class LandingPage extends React.Component {
 		this.state = {
 			startedGame: false,
 			currentQuestion: 0,
-			playerName: ''
+			playerName: '',
+			playerStrength: 0,
+			playerSpeed: 0,
+			playerIntelligence: 0
 		}
 	}
 
@@ -43,7 +46,12 @@ export default class LandingPage extends React.Component {
 						<input className='player-name-input' placeholder='Enter your name...' />
 						<button className="confirm-name-button">+</button>
 					</form>
-					<StatsBox name={this.state.playerName} />
+					<StatsBox 
+						name={this.state.playerName} 
+						strength={this.state.playerStrength}
+						speed={this.state.playerSpeed}
+						intelligence={this.state.playerIntelligence}
+					/>
 				</div>
 			);
 		}
