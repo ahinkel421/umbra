@@ -1,7 +1,7 @@
 const QUESTIONS = [
 	{
 		number: 0,
-		text: ""
+		text: "Hello traveller. Don't believe I've seen you around here before. What's your name?"
 	}
 ];
 

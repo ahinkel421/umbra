@@ -6,7 +6,7 @@ export default class DialogSection extends React.Component {
 	render() {
 		return(
 			<section className='dialog-section'>
-				<Question />
+				<Question text={this.props.currentQuestion} />
 			</section>
 		);
 	}

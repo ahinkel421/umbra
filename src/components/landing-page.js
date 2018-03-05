@@ -4,8 +4,6 @@ import StatsBox from './stats-box';
 import './landing-page.css';
 import QUESTIONS from '../all-questions';
 
-console.log(QUESTIONS[0]);
-
 export default class LandingPage extends React.Component {
 	constructor(props) {
 		super(props);
@@ -22,8 +20,7 @@ export default class LandingPage extends React.Component {
 
 	startGame(startedGame) {
 		this.setState({
-			startedGame,
-			currentQuestion: 1
+			startedGame
 		});
 	}
 
@@ -38,6 +35,7 @@ export default class LandingPage extends React.Component {
 	}
 
 	render() {
+		let currentQuestionText = QUESTIONS[this.state.currentQuestion].text;
 		if(!this.state.startedGame) {
 			return(
 				<div className='button-box'>
@@ -48,7 +46,7 @@ export default class LandingPage extends React.Component {
 		else if(this.state.currentQuestion >= 0) {
 			return(
 				<div>
-					<DialogSection />
+					<DialogSection currentQuestion={currentQuestionText} />
 					<form className='name-form' onSubmit={this.handleSubmit}>
 						<input 
 							className='player-name-input' 
