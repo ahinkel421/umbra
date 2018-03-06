@@ -1,6 +1,3 @@
-//“Pulvis et umbra sumus. (We are but dust and shadow.)” -Horace (fades in and then out)
-//Umbra fades in, then "start game" button fades in.
-
 const QUESTIONS = [
 	//  Question 0
 	{
@@ -56,3 +53,7 @@ const QUESTIONS = [
 ];
 
 export default QUESTIONS;
+
+//“Pulvis et umbra sumus. (We are but dust and shadow.)” -Horace (fades in and then out)
+//Umbra fades in, then "start game" button fades in.
+
