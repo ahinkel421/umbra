@@ -54,6 +54,11 @@ const QUESTIONS = [
 
 export default QUESTIONS;
 
+//TODOS:
+//Add answer component
+//Render answer components with a prop of question number, use that question number to access index of question/answers
+//
+
+//STYLING:
 //“Pulvis et umbra sumus. (We are but dust and shadow.)” -Horace (fades in and then out)
 //Umbra fades in, then "start game" button fades in.
-

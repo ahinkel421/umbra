@@ -10,23 +10,15 @@ export default class LandingPage extends React.Component {
 		this.state = {
 			startedGame: false,
 			currentQuestion: 0,
-			name: "",
 			strength: 0,
 			speed: 0,
 			intelligence: 0
 		};
-		this.setName = this.setName.bind(this);
 	}
 
 	startGame(startedGame) {
 		this.setState({
 			startedGame
-		});
-	}
-
-	setName(e) {
-		this.setState({
-			name: e.target.value
 		});
 	}
 
@@ -49,12 +41,6 @@ export default class LandingPage extends React.Component {
 				<div>
 					<DialogSection currentQuestion={currentQuestionText} />
 					<form className="name-form" onSubmit={this.handleSubmit}>
-						<input
-							className="player-name-input"
-							placeholder="Enter your name..."
-							value={this.state.value}
-							onChange={this.setName}
-						/>
 						<button className="confirm-name-button">Submit</button>
 					</form>
 					<StatsBox
