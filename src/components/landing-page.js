@@ -28,6 +28,7 @@ export default class LandingPage extends React.Component {
 
 	render() {
 		let currentQuestionText = QUESTIONS[this.state.currentQuestion].text;
+		let currentAnswersArray = QUESTIONS[this.state.currentQuestion].answers;
 		if (!this.state.startedGame) {
 			return (
 				<div className="button-box">
@@ -39,7 +40,10 @@ export default class LandingPage extends React.Component {
 		} else if (this.state.currentQuestion >= 0) {
 			return (
 				<div>
-					<DialogSection currentQuestion={currentQuestionText} />
+					<DialogSection
+						currentQuestion={currentQuestionText}
+						currentAnswers={currentAnswersArray}
+					/>
 					<form className="name-form" onSubmit={this.handleSubmit}>
 						<button className="confirm-name-button">Submit</button>
 					</form>
