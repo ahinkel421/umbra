@@ -1,7 +1,6 @@
 const QUESTIONS = [
 	//  Question 0
 	{
-		number: 0,
 		text:
 			"You’re walking along a candlelit, cobblestone street. Can’t remember how you got there, or where you’re going. You suddenly feel something sharp pressed against your lower back. You hear a voice. “Here’s what’s gunna happen. You’re gunna give me everything you got in those pockets, and then you’re gunna walk away...Got it?” What do you do?",
 		answers: [
@@ -35,7 +34,7 @@ const QUESTIONS = [
 			},
 			{
 				text:
-					"Convince them that you have friends in high, watching him as you speak. That he's making a big mistake. (Lie)",
+					"Convince them that you have friends in high places, watching him as you speak. That he's making a big mistake. (Lie)",
 				goToQuestion: 4,
 				statEffect: {
 					strength: 0,
@@ -47,7 +46,6 @@ const QUESTIONS = [
 	},
 	//Question 1
 	{
-		number: 1,
 		text: ""
 	}
 ];
