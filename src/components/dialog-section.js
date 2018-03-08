@@ -8,20 +8,26 @@ export default class DialogSection extends React.Component {
 		return (
 			<section className="dialog-section">
 				<Question text={this.props.currentQuestion} />
-				<ul>
-					<li>
-						<Answer text={this.props.currentAnswers[0].text} />
-					</li>
-					<li>
-						<Answer text={this.props.currentAnswers[1].text} />
-					</li>
-					<li>
-						<Answer text={this.props.currentAnswers[2].text} />
-					</li>
-					<li>
-						<Answer text={this.props.currentAnswers[3].text} />
-					</li>
-				</ul>
+				<form>
+					<ul>
+						<li>
+							<input type="radio" />
+							<Answer text={this.props.currentAnswers[0].text} />
+						</li>
+						<li>
+							<input type="radio" />
+							<Answer text={this.props.currentAnswers[1].text} />
+						</li>
+						<li>
+							<input type="radio" />
+							<Answer text={this.props.currentAnswers[2].text} />
+						</li>
+						<li>
+							<input type="radio" />
+							<Answer text={this.props.currentAnswers[3].text} />
+						</li>
+					</ul>
+				</form>
 			</section>
 		);
 	}
