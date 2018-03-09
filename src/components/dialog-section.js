@@ -7,7 +7,6 @@ export default class DialogSection extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			toggled: false,
 			selectedOption: "option0"
 		};
 		this.handleChecked = this.handleChecked.bind(this);
@@ -17,11 +16,11 @@ export default class DialogSection extends React.Component {
 		e.preventDefault();
 	}
 
-	handleChecked() {
-		this.setState(prevState => ({
-			toggled: !prevState.toggled
-		}));
-		console.log(this.state.toggled);
+	handleChecked(e) {
+		this.setState({
+			selectedOption: e.target.value
+		});
+		console.log(e.target.value);
 	}
 
 	render() {
@@ -45,6 +44,7 @@ export default class DialogSection extends React.Component {
 							<input
 								type="radio"
 								value="option1"
+								onChange={this.handleChecked}
 								checked={
 									this.state.selectedOption === "option1"
 								}
@@ -55,6 +55,7 @@ export default class DialogSection extends React.Component {
 							<input
 								type="radio"
 								value="option2"
+								onChange={this.handleChecked}
 								checked={
 									this.state.selectedOption === "option2"
 								}
@@ -65,6 +66,7 @@ export default class DialogSection extends React.Component {
 							<input
 								type="radio"
 								value="option3"
+								onChange={this.handleChecked}
 								checked={
 									this.state.selectedOption === "option3"
 								}
