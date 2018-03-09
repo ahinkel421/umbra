@@ -20,7 +20,6 @@ export default class DialogSection extends React.Component {
 		this.setState({
 			selectedOption: e.target.value
 		});
-		console.log(e.target.value);
 	}
 
 	render() {
