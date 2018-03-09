@@ -4,6 +4,10 @@ import Answer from "./answer";
 import "./dialog-section.css";
 
 export default class DialogSection extends React.Component {
+	handleSubmit(e) {
+		e.preventDefault();
+	}
+	handleChecked(e) {}
 	render() {
 		return (
 			<section className="dialog-section">
@@ -11,7 +15,7 @@ export default class DialogSection extends React.Component {
 				<form>
 					<ul>
 						<li>
-							<input type="radio" />
+							<input type="radio" checked="true" />
 							<Answer text={this.props.currentAnswers[0].text} />
 						</li>
 						<li>
@@ -27,6 +31,7 @@ export default class DialogSection extends React.Component {
 							<Answer text={this.props.currentAnswers[3].text} />
 						</li>
 					</ul>
+					<button onClick={this.handleSubmit}>Submit</button>
 				</form>
 			</section>
 		);

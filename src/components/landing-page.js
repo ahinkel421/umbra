@@ -22,10 +22,6 @@ export default class LandingPage extends React.Component {
 		});
 	}
 
-	handleSubmit(e) {
-		e.preventDefault();
-	}
-
 	render() {
 		let currentQuestionText = QUESTIONS[this.state.currentQuestion].text;
 		let currentAnswersArray = QUESTIONS[this.state.currentQuestion].answers;
@@ -44,9 +40,6 @@ export default class LandingPage extends React.Component {
 						currentQuestion={currentQuestionText}
 						currentAnswers={currentAnswersArray}
 					/>
-					<form className="name-form" onSubmit={this.handleSubmit}>
-						<button className="confirm-name-button">Submit</button>
-					</form>
 					<StatsBox
 						name={this.state.name}
 						strength={this.state.strength}
