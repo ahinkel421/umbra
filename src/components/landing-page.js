@@ -22,6 +22,18 @@ export default class LandingPage extends React.Component {
 		});
 	}
 
+	selectAnswer(answer) {
+		var currentQuestion = QUESTIONS[this.state.currentQuestion];
+		var currentQuestionAnswers = currentQuestion.answers;
+		var selectedAnswer = currentQuestionAnswers[answer];
+
+		this.setState({
+			currentQuestion: selectedAnswer.goToQuestion,
+			intelligence:
+				this.state.intelligence + selectedAnswer.statEffect.intelligence
+		});
+	}
+
 	render() {
 		let currentQuestionText = QUESTIONS[this.state.currentQuestion].text;
 		let currentAnswersArray = QUESTIONS[this.state.currentQuestion].answers;
@@ -39,6 +51,7 @@ export default class LandingPage extends React.Component {
 					<DialogSection
 						currentQuestion={currentQuestionText}
 						currentAnswers={currentAnswersArray}
+						selectAnswer={answer => this.selectAnswer(answer)}
 					/>
 					<StatsBox
 						name={this.state.name}

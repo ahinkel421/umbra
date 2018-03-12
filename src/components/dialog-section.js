@@ -7,13 +7,18 @@ export default class DialogSection extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			selectedOption: "option0"
+			selectedOption: ""
 		};
 		this.handleChecked = this.handleChecked.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
+		this.props.selectAnswer(Number(this.state.selectedOption));
+		this.setState({
+			selectedOption: ""
+		});
 	}
 
 	handleChecked(e) {
@@ -31,44 +36,36 @@ export default class DialogSection extends React.Component {
 						<li>
 							<input
 								type="radio"
-								value="option0"
+								value="0"
 								onChange={this.handleChecked}
-								checked={
-									this.state.selectedOption === "option0"
-								}
+								checked={this.state.selectedOption === "0"}
 							/>
 							<Answer text={this.props.currentAnswers[0].text} />
 						</li>
 						<li>
 							<input
 								type="radio"
-								value="option1"
+								value="1"
 								onChange={this.handleChecked}
-								checked={
-									this.state.selectedOption === "option1"
-								}
+								checked={this.state.selectedOption === "1"}
 							/>
 							<Answer text={this.props.currentAnswers[1].text} />
 						</li>
 						<li>
 							<input
 								type="radio"
-								value="option2"
+								value="2"
 								onChange={this.handleChecked}
-								checked={
-									this.state.selectedOption === "option2"
-								}
+								checked={this.state.selectedOption === "2"}
 							/>
 							<Answer text={this.props.currentAnswers[2].text} />
 						</li>
 						<li>
 							<input
 								type="radio"
-								value="option3"
+								value="3"
 								onChange={this.handleChecked}
-								checked={
-									this.state.selectedOption === "option3"
-								}
+								checked={this.state.selectedOption === "3"}
 							/>
 							<Answer text={this.props.currentAnswers[3].text} />
 						</li>
