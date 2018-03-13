@@ -7,7 +7,8 @@ export default class DialogSection extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			selectedOption: ""
+			selectedOption: "",
+			onResponse: false
 		};
 		this.handleChecked = this.handleChecked.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,7 +18,15 @@ export default class DialogSection extends React.Component {
 		e.preventDefault();
 		this.props.selectAnswer(Number(this.state.selectedOption));
 		this.setState({
-			selectedOption: ""
+			selectedOption: "",
+			onResponse: true
+		});
+	}
+
+	handleNextQuestion(e) {
+		e.preventDefault();
+		this.setState({
+			onResponse: false
 		});
 	}
 

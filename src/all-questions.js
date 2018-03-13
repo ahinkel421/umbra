@@ -46,7 +46,8 @@ const QUESTIONS = [
 	},
 	//Question 1
 	{
-		text: "This is question 1.",
+		text:
+			"You hand over the little money you have. The thief shoves you to the ground and runs away. You get up, brush yourself off and head home.",
 		answers: [
 			{
 				text: "Hand it over and keep walking, not worth the trouble.",

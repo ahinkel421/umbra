@@ -3,10 +3,10 @@ body {
 }
 
 button {
-	font-family: 'Open Sans', sans-serif;   
+	font-family: "Open Sans", sans-serif;
 	width: 90px;
-    height: 25px;
-    border-radius: 5px;
+	height: 25px;
+	border-radius: 5px;
 }
 
 .confirm-name-button {
@@ -25,7 +25,7 @@ button {
 	height: 28px;
 	font-size: 15px;
 	border-radius: 15px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 .player-name-input:focus {
