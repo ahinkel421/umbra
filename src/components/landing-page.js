@@ -10,6 +10,7 @@ export default class LandingPage extends React.Component {
 		this.state = {
 			startedGame: false,
 			currentQuestion: 0,
+			onResponse: false,
 			strength: 0,
 			speed: 0,
 			intelligence: 0
@@ -19,6 +20,13 @@ export default class LandingPage extends React.Component {
 	startGame(startedGame) {
 		this.setState({
 			startedGame
+		});
+	}
+
+	handleNextQuestion(e) {
+		e.preventDefault();
+		this.setState({
+			onResponse: false
 		});
 	}
 
@@ -34,6 +42,12 @@ export default class LandingPage extends React.Component {
 		});
 	}
 
+	handleResponse(e) {
+		this.setState({
+			onResponse: e
+		});
+	}
+
 	render() {
 		let currentQuestionText = QUESTIONS[this.state.currentQuestion].text;
 		let currentAnswersArray = QUESTIONS[this.state.currentQuestion].answers;
@@ -45,13 +59,33 @@ export default class LandingPage extends React.Component {
 					</button>
 				</div>
 			);
-		} else if (this.state.currentQuestion >= 0) {
+		} else if (
+			this.state.currentQuestion >= 0 &&
+			this.state.onResponse === false
+		) {
 			return (
 				<div>
 					<DialogSection
 						currentQuestion={currentQuestionText}
 						currentAnswers={currentAnswersArray}
 						selectAnswer={answer => this.selectAnswer(answer)}
+						onResponse={this.state.onResponse}
+						handleResponse={e => this.handleResponse(e)}
+					/>
+					<StatsBox
+						name={this.state.name}
+						strength={this.state.strength}
+						speed={this.state.speed}
+						intelligence={this.state.intelligence}
+					/>
+				</div>
+			);
+		} else {
+			return (
+				<div>
+					<DialogSection
+						currentQuestion={currentQuestionText}
+						onResponse={this.state.onResponse}
 					/>
 					<StatsBox
 						name={this.state.name}
