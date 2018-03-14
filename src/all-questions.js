@@ -44,48 +44,20 @@ const QUESTIONS = [
 			}
 		]
 	},
-	//Question 1
+	//Question (response) 1
 	{
 		text:
 			"You hand over the little money you have. The thief shoves you to the ground and runs away. You get up, brush yourself off and head home.",
+		goToQuestion: 5
+	},
+	{},
+	{},
+	{},
+	{
+		text: "it's working!",
 		answers: [
 			{
-				text: "Hand it over and keep walking, not worth the trouble.",
-				goToQuestion: 1,
-				statEffect: {
-					strength: 0,
-					speed: 0,
-					intelligence: 3
-				}
-			},
-			{
-				text: "Try for a spinning elbow to knock them out.",
-				goToQuestion: 2,
-				statEffect: {
-					strength: 3,
-					speed: 2,
-					intelligence: 1
-				}
-			},
-			{
-				text:
-					"Pretend to reach for your pocket, grab their wrist instead, attempt to disarm them and run free.",
-				goToQuestion: 3,
-				statEffect: {
-					strength: 1,
-					speed: 3,
-					intelligence: 2
-				}
-			},
-			{
-				text:
-					"Convince them that you have friends in high places, watching him as you speak. That he's making a big mistake. (Lie)",
-				goToQuestion: 4,
-				statEffect: {
-					strength: 0,
-					speed: 0,
-					intelligence: 6
-				}
+				text: "is it really?"
 			}
 		]
 	}
