@@ -37,6 +37,8 @@ export default class LandingPage extends React.Component {
 
 		this.setState({
 			currentQuestion: selectedAnswer.goToQuestion,
+			strength: this.state.strength + selectedAnswer.statEffect.strength,
+			speed: this.state.speed + selectedAnswer.statEffect.speed,
 			intelligence:
 				this.state.intelligence + selectedAnswer.statEffect.intelligence
 		});
