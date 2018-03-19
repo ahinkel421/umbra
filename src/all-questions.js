@@ -58,6 +58,15 @@ const QUESTIONS = [
 		answers: [
 			{
 				text: "is it really?"
+			},
+			{
+				text: "Yeah I think so"
+			},
+			{
+				text: "Are you sure?"
+			},
+			{
+				text: "We'll find out!"
 			}
 		]
 	}

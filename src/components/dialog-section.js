@@ -10,9 +10,9 @@ export default class DialogSection extends React.Component {
 		this.state = {
 			selectedOption: ""
 		};
-
 		this.handleChecked = this.handleChecked.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleNextButton = this.handleNextButton.bind(this);
 	}
 
 	handleSubmit(e) {
@@ -28,6 +28,11 @@ export default class DialogSection extends React.Component {
 		this.setState({
 			selectedOption: e.target.value
 		});
+	}
+
+	handleNextButton(e) {
+		e.preventDefault();
+		this.props.handleNextQuestion(this.props.nextQuestion);
 	}
 
 	render() {
@@ -91,7 +96,7 @@ export default class DialogSection extends React.Component {
 				<section className="dialog-section">
 					<Response text={this.props.currentQuestion} />
 					<form>
-						<button onClick={this.handleNextQuestion}>Next</button>
+						<button onClick={this.handleNextButton}>Proceed</button>
 					</form>
 				</section>
 			);

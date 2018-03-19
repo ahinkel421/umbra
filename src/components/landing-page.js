@@ -23,10 +23,10 @@ export default class LandingPage extends React.Component {
 		});
 	}
 
-	handleNextQuestion(e) {
-		e.preventDefault();
+	handleNextQuestion(index) {
 		this.setState({
-			onResponse: false
+			onResponse: false,
+			currentQuestion: index
 		});
 	}
 
@@ -42,15 +42,17 @@ export default class LandingPage extends React.Component {
 		});
 	}
 
-	handleResponse(e) {
+	handleResponse(boo) {
 		this.setState({
-			onResponse: e
+			onResponse: boo
 		});
 	}
 
 	render() {
 		let currentQuestionText = QUESTIONS[this.state.currentQuestion].text;
 		let currentAnswersArray = QUESTIONS[this.state.currentQuestion].answers;
+		let nextQuestionIndex =
+			QUESTIONS[this.state.currentQuestion].goToQuestion;
 		if (!this.state.startedGame) {
 			return (
 				<div className="button-box">
@@ -85,7 +87,11 @@ export default class LandingPage extends React.Component {
 				<div>
 					<DialogSection
 						currentQuestion={currentQuestionText}
+						nextQuestion={nextQuestionIndex}
 						onResponse={this.state.onResponse}
+						handleNextQuestion={index =>
+							this.handleNextQuestion(index)
+						}
 					/>
 					<StatsBox
 						name={this.state.name}
