@@ -1,5 +1,5 @@
 .stats-box {
-	height: 400px;
+	height: 256px;
 	width: 350px;
 	position: fixed;
 	top: 205px;
@@ -11,5 +11,13 @@
 
 .player-stats {
 	text-align: center;
+}
+
+@media (max-width: 1250px) {
+	.stats-box {
+		right: 20px;
+		bottom: 20px;
+		left: 20px;
+	}
 }
 
