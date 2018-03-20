@@ -1,7 +1,7 @@
 .stats-box {
-	height: 256px;
+	height: 400px;
 	width: 350px;
-	position: fixed;
+	position: absolute;
 	top: 205px;
 	right: 20px;
 	border: 2px solid grey;
@@ -15,9 +15,15 @@
 
 @media (max-width: 1250px) {
 	.stats-box {
-		right: 20px;
-		bottom: 20px;
-		left: 20px;
+		position: fixed;
+		top: initial;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: initial;
+		width: initial;
+		border: initial;
+		border-radius: initial;
+		border-top: 2px solid grey;
 	}
 }
-
