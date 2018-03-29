@@ -4,9 +4,14 @@ body {
 
 button {
 	font-family: "Open Sans", sans-serif;
-	width: 90px;
-	height: 25px;
+	width: 115px;
+    font-size: 15px;
+    height: 32px;
 	border-radius: 5px;
+	background-color: #252525;
+	color: white;
+	transition-duration: 1s;
+	transition-timing-function: ease;
 }
 
 .confirm-name-button {
@@ -34,4 +39,12 @@ button {
 
 .player-name-input:focus::placeholder {
 	color: #afafaf;
+}
+
+button:hover,
+button:active {
+	letter-spacing: 1.3px;
+	background-color: #e6e6e6f0;
+	color: black;
+	cursor: pointer;
 }
