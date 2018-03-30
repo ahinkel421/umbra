@@ -93,10 +93,10 @@ export default class DialogSection extends React.Component {
 			);
 		} else {
 			return (
-				<section className="dialog-section">
+				<section className="dialog-section response-section">
 					<Response text={this.props.currentQuestion} />
 					<form>
-						<button onClick={this.handleNextButton}>Proceed</button>
+						<button className="proceed-button" onClick={this.handleNextButton}>Proceed</button>
 					</form>
 				</section>
 			);

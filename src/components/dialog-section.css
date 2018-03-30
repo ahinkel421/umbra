@@ -23,3 +23,15 @@ li {
 		width: 90%;
 	}
 }
+
+@media (max-width: 600px) {
+	.response-section {
+		text-align: center;
+	}
+	form ul{
+		padding: 20px;
+	}
+	li {
+		font-size: 11px;
+	}
+}
