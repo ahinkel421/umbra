@@ -29,3 +29,22 @@
 		background: #191919;
 	}
 }
+
+@media (max-width: 600px) {
+	.stats-box {
+		height: 90px;
+
+	}
+	h2 {
+		font-size: 13px;
+		margin: 0;
+	}
+	.stats-box ul {
+		text-align: center;
+		padding-left: 17px
+	}
+	.stats-box li {
+		display: inline;
+		padding: 21px;
+	}
+}
