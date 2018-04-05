@@ -2,7 +2,7 @@ const QUESTIONS = [
 	//  Question 0
 	{
 		text:
-			"You’re walking along a candlelit, cobblestone street. Can’t remember how you got there, or where you’re going. You suddenly feel something sharp pressed against your lower back. You hear a voice. “Here’s what’s gunna happen. You’re gunna give me everything you got in those pockets, and then you’re gunna walk away...Got it?” What do you do?",
+			"You’re walking along a candlelit, cobblestone street. Can’t remember how you got there, or where you’re going. You suddenly feel something sharp pressed against your lower back. You hear a voice. “Give me everything you got in your pockets, and walk away...” What do you do?",
 		answers: [
 			{
 				text: "Hand it over and keep walking. Not worth the trouble.",
@@ -78,7 +78,13 @@ const QUESTIONS = [
 		text: "it's working!",
 		answers: [
 			{
-				text: "is it really?"
+				text: "is it really?",
+				goToQuestion: 0,
+				statEffect: {
+					strength: 0,
+					speed: 0,
+					intelligence: 6
+				}
 			},
 			{
 				text: "Yeah I think so"
