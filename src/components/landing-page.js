@@ -58,6 +58,7 @@ export default class LandingPage extends React.Component {
 		if (!this.state.startedGame) {
 			return (
 				<div className="button-box">
+					<p className='opening-quote'>“Pulvis et umbra sumus. (We are but dust and shadow.)” -Horace</p>
 					<button className="start-button" onClick={() => this.startGame(true)}>
 						Start Game
 					</button>
