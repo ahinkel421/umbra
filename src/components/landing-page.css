@@ -15,10 +15,14 @@ button {
 }
 
 .opening-quote {
-    position: absolute;
-  top: 50%;
-  left: 50%;
+  position: absolute;
+  font-size: 30px;
+  width: 100%;
+  top: 40%;
   transform: translate(-50%, -50%);
+  animation: fadeIn 1.5s ease-in both;
+  opacity: 0;
+  animation-delay: 2s;
 }
 
 .confirm-name-button {
@@ -26,7 +30,7 @@ button {
 	width: 63px;
 }
 
-.button-box {
+.quote-and-button {
 	text-align: center;
 }
 
@@ -54,4 +58,15 @@ button:active {
 	background-color: #f5f5f5;
 	color: black;
 	cursor: pointer;
+}
+
+@keyframes fadeIn {
+ 0% {
+		opacity: 0;
+		transform: translate3d(0, -10%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
 }
