@@ -14,19 +14,30 @@ button {
 	transition-timing-function: ease;
 }
 
-.opening-quote {
-  position: absolute;
-  font-size: 30px;
-  width: 100%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  animation: fadeIn 1.5s ease-in both;
-  opacity: 0;
-  animation-delay: 2s;
+.quote-and-button {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 40%;
 }
 
-.quote-and-button {
-	text-align: center;
+.opening-quote, .start-button {
+	transform: translate(-50%, -50%);
+    animation: fadeIn 1.5s ease-in both;
+    opacity: 0;
+}
+
+.opening-quote {
+    font-size: 30px;
+    animation-delay: 2s;
+    margin-bottom: 30px;
+}
+
+.start-button {
+	animation-delay: 5s;
+	width: 160px;
+	height: 50px;
+	font-size: 20px;
 }
 
 button:hover,
